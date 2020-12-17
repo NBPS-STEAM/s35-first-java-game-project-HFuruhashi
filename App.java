@@ -7,9 +7,9 @@ public class App {
         System.out.println("Defeat the Skeleton!");
 
         while (skeletonHp > 0 || playerHp > 0) {
-          System.out.println("Skeleton's HP: " + skeletonHp);
+          System.out.println("\nSkeleton's HP: " + skeletonHp);
           System.out.println("Your HP: " + playerHp);
-          System.out.println("\n What will you do?: <1. Attack>");
+          System.out.println("\n What will you do?: 1. Attack");
           System.out.println("Choose a number!");
           int action;
           Scanner sc = new Scanner(System.in);
@@ -17,9 +17,14 @@ public class App {
 
           if (action == 1) {
             skeletonHp -= 10;
+            System.out.println("\nYou attacked!");
           }
 
-          playerHp -= 15;
+          System.out.println("\n Skeleton's Multiple Attack!!");
+          for (int i = 0; i < 3; i++) {
+            playerHp -= 5;
+            System.out.println("\nYour HP: " + playerHp);
+          }
         }
 
 
